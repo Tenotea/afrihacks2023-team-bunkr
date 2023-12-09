@@ -4,6 +4,8 @@ import * as SplashScreen from "expo-splash-screen";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { NavigatorSelector } from "./router";
 
 SplashScreen.preventAutoHideAsync();
 export default function App() {
@@ -23,9 +25,9 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <View style={styles.container}>
-        <Text style={{fontFamily: "SatoshiRegular", fontWeight: "300"}}>Welcome to BUNKR</Text>
-      </View>
+      <NavigationContainer>
+        <NavigatorSelector />
+      </NavigationContainer>
     </GestureHandlerRootView>
   );
 }
