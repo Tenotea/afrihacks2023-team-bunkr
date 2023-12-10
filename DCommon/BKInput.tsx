@@ -18,6 +18,7 @@ type inputProps = {
   placeholderText?: string;
   mT?: number;
   mB?: number;
+  pL?: number;
   control: any;
   name: string;
   rules?: any;
@@ -25,6 +26,7 @@ type inputProps = {
   onPress?: () => void;
   rightComponent?: any;
   editable?: boolean;
+  inputGroup?:boolean
   textInputProps?: TextInputProps;
 };
 
@@ -33,6 +35,7 @@ const BKInput = ({
   placeholderText,
   mT = 0,
   mB = 0,
+  pL,
   name,
   rules = {},
   type = "input",
@@ -40,6 +43,7 @@ const BKInput = ({
   onPress,
   rightComponent,
   editable = true,
+  inputGroup = false,
   textInputProps,
 }: inputProps) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -55,6 +59,7 @@ const BKInput = ({
         style={{
           marginTop: mT,
           marginBottom: mB,
+          paddingLeft: pL
         }}
       >
         <BKText size={12}>{label}</BKText>
@@ -183,9 +188,14 @@ const styles = StyleSheet.create({
     height: 50,
     borderWidth: 1,
     borderColor: "#15171D",
-    paddingHorizontal: 18,
+    paddingLeft: 18, // changed this to accomodate the design
     borderRadius: 5,
     backgroundColor: "#0F1014",
     marginTop: 5,
   },
+
+  inputGroup: {
+    // paddingHorizontal: 0
+    color: "red",
+  }
 });
