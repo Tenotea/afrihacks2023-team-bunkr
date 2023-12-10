@@ -1,35 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import BKText from "./BKText";
+import { colors } from "../themes";
 
-type LogoProps = {
-    marginTop?: number;
-    marginBottom?: number;
-    marginLeft?: number;
-    marginRight?: number;
-}
-
-const BKLogo = ({ marginTop=0,marginBottom=0, marginLeft=0, marginRight=0 }: LogoProps) => {
+const BKLogo = ({}) => {
   return (
-    <View style={[styles.logo, {marginTop, marginBottom, marginLeft, marginRight}]}>
-        <Text style={styles.mainColor}>
-            <Text style={styles.blueColor}>bunkr.</Text>finance
-        </Text>
+    <View>
+      <BKText weight="black" size={18} color={colors.brandblue}>
+        <BKText weight="black" size={18} color={colors.brandgreen}>
+          bunkr.
+        </BKText>
+        finance
+      </BKText>
     </View>
-  )
-}
+  );
+};
 
-export default BKLogo
-
-const styles = StyleSheet.create({
-    logo: {
-        
-    }, 
-    mainColor: {
-        fontSize: 18,
-        fontWeight: '900',
-        color: "white"
-    }, 
-    blueColor: {
-        color: "#0029FF"
-    }
-})
+export default BKLogo;

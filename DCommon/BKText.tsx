@@ -46,6 +46,11 @@ const BKText = ({
         fontWeight: "700",
       };
       break;
+    case "black":
+      textWeightStyle = {
+        fontWeight: "900",
+      };
+      break;
     default:
       textWeightStyle = {
         fontWeight: "400",

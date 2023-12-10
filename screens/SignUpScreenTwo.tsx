@@ -1,10 +1,16 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { PageheaderSubheader, ScrollableWrapper } from "../components";
+import {
+  PageWrapper,
+  PageheaderSubheader,
+  ScrollableWrapper,
+  WarningBox,
+} from "../components";
 import { BKButton, BKInput, BKText, BKView } from "../DCommon";
 import { Controller, useForm } from "react-hook-form";
 import BKLogo from "../DCommon/BKLogo";
 import { useNavigation } from "@react-navigation/native";
+import { colors } from "../themes";
 
 const SignUpScreenTwo = () => {
   const navigation = useNavigation();
@@ -12,31 +18,24 @@ const SignUpScreenTwo = () => {
 
   const goToPhoneNumberVerificationScreen = () => {
     // @ts-ignore
-    navigation.navigate('VerifyNumberScreen');
-  }
+    navigation.navigate("VerifyNumberScreen");
+  };
   return (
-    <ScrollableWrapper>
-      <View style={styles.signUpContainer}>
-        <BKLogo 
-          marginTop={88}
-          marginBottom={298}
-        />
+    <PageWrapper>
+      <View style={{ flex: 1 }}>
 
-        <BKText 
-            children={"Hi there!"}
-        />
+        <BKText color={colors.blue5}>Hi there!</BKText>
 
         <PageheaderSubheader
           headerText="Emmanuel Adelakun"
           subHeaderText="You are one step closer to enjoying the financial freedom you’ve always imagined"
         />
 
-        <View style={styles.verificationContainer}>
-            <BKText 
-                children={"Please ensure you have access to your phone number +23480******34 as you will need to verify it before your account is provisioned."}
-                color="#5BFF6C"
-            />
-        </View>
+        <WarningBox
+          type="success"
+          warningText="Please ensure you have access to your phone number +23480******34 as you
+        will need to verify it before your account is provisioned."
+        />
 
         <BKInput
           label="Email Address"
@@ -49,7 +48,6 @@ const SignUpScreenTwo = () => {
           mB={16}
         />
 
-
         <BKInput
           label="Password"
           control={control}
@@ -58,36 +56,20 @@ const SignUpScreenTwo = () => {
           rules={{
             required: "Date of birth is required",
           }}
-          mB={43}
+          mB={42}
         />
-        
 
         <BKButton
           btnText="Continue"
-        //   onpress={() => console.log("Clicked")}
           onpress={goToPhoneNumberVerificationScreen}
-          marginBottom={54}
         />
       </View>
-    </ScrollableWrapper>
+    </PageWrapper>
   );
 };
 
 export default SignUpScreenTwo;
 
 const styles = StyleSheet.create({
-  signUpContainer: {
-    flex: 1,
-    paddingHorizontal: 34,
-  },
 
-  verificationContainer: {
-    borderWidth: 1,
-    borderColor: "#5BFF6C",
-    paddingVertical: 14, 
-    paddingLeft: 17, 
-    paddingRight: 7, 
-    borderRadius: 10,
-    marginVertical: 30,
-  }
 });

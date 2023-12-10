@@ -1,33 +1,28 @@
-import { StyleSheet, Text, View, StatusBar } from "react-native";
+import { StyleSheet, Text, View, StatusBar, ScrollView } from "react-native";
 import React from "react";
-import {
-  SafeAreaView,
-  useSafeAreaInsets,
-} from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { colors } from "../themes";
+import { BKLogo } from "../DCommon";
 
 const PageWrapper = ({
-  bottom = false,
-  top = true,
   children,
 }: {
   bottom?: boolean;
   top?: boolean;
   children: React.ReactElement;
 }) => {
-  const insets = useSafeAreaInsets();
-
   return (
-    <View
+    <SafeAreaView
       style={{
         flex: 1,
-        paddingTop: top ? insets.top : 0,
-        backgroundColor: "#08090D",
-        paddingBottom: bottom ? insets.bottom : 0,
+        backgroundColor: colors.background,
+        paddingHorizontal: 24,
       }}
     >
       <StatusBar animated={true} barStyle="light-content" />
-      {children}
-    </View>
+      <BKLogo />
+      <ScrollView style={{ flex: 1, paddingTop: 45 }}>{children}</ScrollView>
+    </SafeAreaView>
   );
 };
 
