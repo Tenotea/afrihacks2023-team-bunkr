@@ -178,7 +178,7 @@ const AuthenticatedNavigator = () => {
 };
 
 export const NavigatorSelector = () => {
-  const token = false;
+  const token = true;
 
   return !token ? <NoAuthNavigator /> : <AuthenticatedNavigator />;
 };

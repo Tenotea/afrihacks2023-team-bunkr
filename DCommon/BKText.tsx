@@ -1,16 +1,18 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TextStyle } from "react-native";
 import React from "react";
 import { colors } from "../themes";
 
 type TextProps = {
+  ui?: TextStyle;
   size?: number;
   color?: string;
   weight?: string;
   styles?: TextProps;
   children: any;
   italized?: boolean;
-};
+} & React.ComponentProps<typeof Text>;
 const BKText = ({
+  ui,
   size = 14,
   color = colors.white,
   weight = "normal",
@@ -67,6 +69,7 @@ const BKText = ({
           fontSize: size,
           fontStyle: italized ? "italic" : "normal",
         },
+        ui,
       ]}
       minimumFontScale={1}
       maxFontSizeMultiplier={1}

@@ -6,6 +6,7 @@ type DCBoxProps = {
   row?: boolean;
   Sbetween?: boolean;
   centered?: boolean;
+  end?: boolean;
 } & React.ComponentProps<typeof View>;
 
 const BKView = ({
@@ -13,14 +14,19 @@ const BKView = ({
   row = false,
   Sbetween = false,
   centered = false,
+  end = false,
   ...rest
 }: DCBoxProps) => {
   return (
     <View
       style={[
         {
-          justifyContent: Sbetween ? "space-between" : "center",
-          alignItems: centered ? "center" : "flex-start",
+          justifyContent: Sbetween
+            ? "space-between"
+            : centered
+            ? "center"
+            : "flex-start",
+          alignItems: centered ? "center" : end ? "flex-end" : "flex-start",
           flexDirection: row ? "row" : "column",
         },
         ui,
