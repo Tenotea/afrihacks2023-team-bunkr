@@ -35,7 +35,7 @@ const DashboardActions = () => {
           <TouchableOpacity
             activeOpacity={0.8}
             key={index + title}
-            style={{ rowGap: 6 }}
+            style={{ rowGap: 6, alignItems: "center" }}
           >
             <BKView style={styles.eachActionWrap}>{<Icon />}</BKView>
             <BKText size={12}>{title}</BKText>
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
     paddingBottom: 50,
-    paddingTop: 30
+    paddingTop: 30,
   },
   eachActionWrap: {
     padding: 13,

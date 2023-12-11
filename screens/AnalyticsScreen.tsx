@@ -3,6 +3,7 @@ import React from "react";
 import { Greetingsheader, Networth, TabWrapper } from "../components";
 import { BKText, BKView } from "../DCommon";
 import { STATS_ACCT } from "../datas";
+import { colors } from "../themes";
 
 type StatProps = {
   item: {
@@ -18,7 +19,7 @@ const EachAccountStat = ({ item }: StatProps) => {
 
   return (
     <View style={[styles.eachAccountStatWrap, { width: "48%" }]}>
-      <BKText size={10} weight="medium" color="#7E84A5" numberOfLines={1}>
+      <BKText size={10} weight="medium" color={colors.blue15} numberOfLines={1}>
         {bankName}
       </BKText>
       <BKView row Sbetween>
@@ -26,7 +27,7 @@ const EachAccountStat = ({ item }: StatProps) => {
           {acctBalance}
         </BKText>
         <View style={{ gap: 2 }}>
-          <BKText size={10} weight="medium" color="#7E84A5">
+          <BKText size={10} weight="medium" color={colors.blue15}>
             {percentSpent}%
           </BKText>
 

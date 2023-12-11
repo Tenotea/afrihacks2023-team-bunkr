@@ -7,6 +7,7 @@ export const colors = {
     blue10: "#A1ABE2",
     blue15: "#7E84A5",
     blue20: "#343749",
+    blue35: "#B5C0FB",
     background: "#08090D",
     red10: "#F44336",
     yellow10: "#FFC107"
