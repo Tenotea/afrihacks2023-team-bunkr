@@ -20,6 +20,11 @@ import {
   HistoryScreen,
   HomeScreen,
   SettingsScreen,
+  SignUpAllSetScreen,
+  SignUpTwoScreen,
+  SignUpVerifyEmailScreen,
+  SignUpVerifyIdentityScreen,
+  SignUpVerifyNumberScreen,
   SignupScreen,
 } from "../screens";
 import {
@@ -30,12 +35,6 @@ import {
   Settingsicon,
 } from "../assets/icons";
 import { useInsets } from "../hooks";
-import SignUpScreenTwo from "../screens/SignUpScreenTwo";
-import SignUpVerifyNumber from "../screens/SignUpVerifyNumber";
-import SignUpVerifyEmail from "../screens/SignUpVerifyEmail";
-import SignUpIdentity from "../screens/SignUpVerifyIdentity";
-import SignUpVerifyIdentity from "../screens/SignUpVerifyIdentity";
-import SignUpAllSetScreen from "../screens/SignUpAllSetScreen";
 
 const AuthStack = createStackNavigator();
 const DashboardTabs = createBottomTabNavigator();
@@ -132,10 +131,10 @@ const NoAuthNavigator = () => {
       initialRouteName="Signup"
     >
       <AuthStack.Screen name="Signup" component={SignupScreen} />
-      <AuthStack.Screen name="ScreenTwo" component={SignUpScreenTwo} />
-      <AuthStack.Screen name="VerifyNumberScreen" component={SignUpVerifyNumber} />
-      <AuthStack.Screen name="VerifyEmailScreen" component={SignUpVerifyEmail} />
-      <AuthStack.Screen name="VerifyIdentityScreen" component={SignUpVerifyIdentity} />
+      <AuthStack.Screen name="ScreenTwo" component={SignUpTwoScreen} />
+      <AuthStack.Screen name="VerifyNumberScreen" component={SignUpVerifyNumberScreen} />
+      <AuthStack.Screen name="VerifyEmailScreen" component={SignUpVerifyEmailScreen} />
+      <AuthStack.Screen name="VerifyIdentityScreen" component={SignUpVerifyIdentityScreen} />
       <AuthStack.Screen name="AllSetScreen" component={SignUpAllSetScreen} />
     </AuthStack.Navigator>
   );

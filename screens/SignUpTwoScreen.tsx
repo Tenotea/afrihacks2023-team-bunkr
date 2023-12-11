@@ -12,7 +12,7 @@ import BKLogo from "../DCommon/BKLogo";
 import { useNavigation } from "@react-navigation/native";
 import { colors } from "../themes";
 
-const SignUpScreenTwo = () => {
+const SignUpTwoScreen = () => {
   const navigation = useNavigation();
   const { control, handleSubmit } = useForm({ mode: "all" });
 
@@ -68,7 +68,7 @@ const SignUpScreenTwo = () => {
   );
 };
 
-export default SignUpScreenTwo;
+export default SignUpTwoScreen;
 
 const styles = StyleSheet.create({
 

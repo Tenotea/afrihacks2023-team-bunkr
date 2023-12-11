@@ -9,7 +9,7 @@ import BKLogo from "../DCommon/BKLogo";
 import { BKButton, BKInput, BKText } from "../DCommon";
 import { useNavigation } from "@react-navigation/native";
 
-const SignUpVerifyNumber = () => {
+const SignUpVerifyNumberScreen = () => {
   const navigation = useNavigation();
   const goToVerifyEmailScreen = () => {
     // @ts-ignore
@@ -32,7 +32,7 @@ const SignUpVerifyNumber = () => {
   );
 };
 
-export default SignUpVerifyNumber;
+export default SignUpVerifyNumberScreen;
 
 const styles = StyleSheet.create({
   verifyNumberContainer: {
