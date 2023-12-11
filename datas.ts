@@ -1,3 +1,5 @@
+
+
 export const BANK_CARDS = [
   {
     type: "PRIMARY ACCOUNT",
@@ -85,5 +87,32 @@ export const RECENT_TRANSACTIONS = [
     amount: "₦125,100",
     bankName: "United Bank for Africa",
     date: "01:13 PM ",
+  },
+];
+
+export const STATS_ACCT = [
+  {
+    statColor: "#F57E20",
+    bankName: "ACCESS BANK PLC",
+    acctBalance: "₦27,295",
+    percentSpent: 47,
+  },
+  {
+    statColor: "#1DCF9F",
+    bankName: "OPAY",
+    acctBalance: "₦193,445",
+    percentSpent: 47,
+  },
+  {
+    statColor: "#0066F5",
+    bankName: "UNITED BANK FOR AFRICA",
+    acctBalance: "₦345,035",
+    percentSpent: 47,
+  },
+  {
+    statColor: "#800080",
+    bankName: "WEMA BANK",
+    acctBalance: "₦345,035",
+    percentSpent: 47,
   },
 ];

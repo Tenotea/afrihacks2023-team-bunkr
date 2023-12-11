@@ -2,11 +2,13 @@ import BankCards from "./BankCards";
 import DashboardActions from "./DashboardActions";
 import Eachtransaction from "./Eachtransaction";
 import Greetingsheader from "./Greetingsheader";
+import Networth from "./Networth";
 import PageWrapper from "./PageWrapper";
 import PageheaderSubheader from "./PageheaderSubheader";
 import ScrollableWrapper from "./ScrollableWrapper";
 import TabWrapper from "./TabWrapper";
 import WarningBox from "./WarningBox";
+
 export {
   PageWrapper,
   PageheaderSubheader,
@@ -17,4 +19,5 @@ export {
   BankCards,
   DashboardActions,
   Eachtransaction,
+  Networth,
 };

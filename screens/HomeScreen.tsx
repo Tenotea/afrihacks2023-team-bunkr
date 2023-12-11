@@ -5,6 +5,7 @@ import {
   DashboardActions,
   Eachtransaction,
   Greetingsheader,
+  Networth,
   TabWrapper,
 } from "../components";
 import { BKText, BKView } from "../DCommon";
@@ -12,18 +13,9 @@ import { colors } from "../themes";
 import { BANK_CARDS, RECENT_TRANSACTIONS } from "../datas";
 
 const HomeScreen = () => {
-  const Networth = () => {
-    return (
-      <BKView centered ui={{ paddingBottom: 60, paddingTop: 30 }}>
-        <BKText size={10} weight="medium" color={colors.blue15}>
-          YOUR NET WORTH
-        </BKText>
-        <BKText size={40} weight="medium">
-          ₦226,640
-        </BKText>
-      </BKView>
-    );
-  };
+
+
+
 
   const LinkedCards = () => {
     return (
@@ -85,7 +77,3 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({});
-{
-  /* <Eachtransaction type="credit" amount={"1000"} bankName="GTB" /> */
-  // <Eachtransaction datas={item} mH={14} />
-}
