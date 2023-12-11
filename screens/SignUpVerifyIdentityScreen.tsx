@@ -7,7 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const VerificationImg = require("../assets/verificationImage.png");
 
-const SignUpVerifyIdentity = () => {
+const SignUpVerifyIdentityScreen = () => {
   const navigation = useNavigation();
 
   const goToAllSetScreen = () => {
@@ -37,7 +37,7 @@ const SignUpVerifyIdentity = () => {
   );
 };
 
-export default SignUpVerifyIdentity;
+export default SignUpVerifyIdentityScreen;
 
 const styles = StyleSheet.create({
   verifyIdentityContainer: {

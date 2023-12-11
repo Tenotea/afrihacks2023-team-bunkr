@@ -6,7 +6,7 @@ import { BKButton } from "../DCommon";
 import { useNavigation } from "@react-navigation/native";
 
 
-const SignUpVerifyEmail = () => {
+const SignUpVerifyEmailScreen = () => {
   const navigation = useNavigation();
   const goToSignUpVerifyIdentity = () => {
     // @ts-ignore
@@ -31,7 +31,7 @@ const SignUpVerifyEmail = () => {
   );
 };
 
-export default SignUpVerifyEmail;
+export default SignUpVerifyEmailScreen;
 
 const styles = StyleSheet.create({
   verifyNumberContainer: {

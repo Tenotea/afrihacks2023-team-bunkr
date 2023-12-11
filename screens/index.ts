@@ -6,6 +6,11 @@ import HistoryScreen from "./HistoryScreen";
 import HomeScreen from "./HomeScreen";
 import SettingsScreen from "./SettingsScreen";
 import SignupScreen from "./SignupScreen";
+import SignUpVerifyNumberScreen from "./SignUpVerifyNumberScreen";
+import SignUpVerifyEmailScreen from "./SignUpVerifyEmailScreen";
+import SignUpVerifyIdentityScreen from "./SignUpVerifyIdentityScreen";
+import SignUpTwoScreen from "./SignUpTwoScreen";
+import SignUpAllSetScreen from "./SignUpAllSetScreen";
 
 
 export {
@@ -16,5 +21,10 @@ export {
   HistoryScreen,
   SettingsScreen,
   HomeScreen,
-  AnalyticsScreen
+  AnalyticsScreen, 
+  SignUpVerifyNumberScreen, 
+  SignUpVerifyEmailScreen, 
+  SignUpVerifyIdentityScreen, 
+  SignUpTwoScreen, 
+  SignUpAllSetScreen
 };
