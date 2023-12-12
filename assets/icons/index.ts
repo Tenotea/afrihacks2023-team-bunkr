@@ -1,6 +1,9 @@
 import Accessbanklogoicon from "./Accessbanklogoicon";
 import Accounttabicon from "./Accounttabicon";
+import Accountwarningicon from "./Accountwarningicon";
 import Analyticstabicon from "./Analyticstabicon";
+import B2bicon from "./B2bicon";
+import Backarrowicon from "./Backarrowicon";
 import Banktransfericon from "./Banktransfericon";
 import Crediticon from "./Crediticon";
 import Dashboardmoreicon from "./Dashboardmoreicon";
@@ -28,4 +31,7 @@ export {
   Dashboardmoreicon,
   Crediticon,
   Debiticon,
+  Backarrowicon,
+  B2bicon,
+  Accountwarningicon,
 };

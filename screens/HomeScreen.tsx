@@ -26,7 +26,7 @@ const HomeScreen = () => {
         contentContainerStyle={{ gap: 12, paddingHorizontal: 14 }}
         snapToAlignment="center"
         pagingEnabled
-        renderItem={BankCards}
+        renderItem={({item}) => <BankCards item={item} />}
       />
     );
   };

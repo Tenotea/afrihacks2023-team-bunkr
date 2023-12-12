@@ -8,12 +8,15 @@ import {
 } from "../assets/icons";
 import { BKText, BKView } from "../DCommon";
 import { colors } from "../themes";
+import { useNavigation } from "@react-navigation/native";
+
 const DashboardActions = () => {
+  const navigation = useNavigation();
   const actions = [
-    {
-      Icon: Banktransfericon,
-      title: "Bank Transfer",
-    },
+    // {
+    //   Icon: Banktransfericon,
+    //   title: "Bank Transfer",
+    // },
     {
       Icon: Paybillsicon,
       title: "Pay Bills",
@@ -35,6 +38,7 @@ const DashboardActions = () => {
           <TouchableOpacity
             activeOpacity={0.8}
             key={index + title}
+            onPress={() => navigation.navigate("Services")}
             style={{ rowGap: 6, alignItems: "center" }}
           >
             <BKView style={styles.eachActionWrap}>{<Icon />}</BKView>

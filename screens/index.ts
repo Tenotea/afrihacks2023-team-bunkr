@@ -11,7 +11,9 @@ import SignUpVerifyEmailScreen from "./SignUpVerifyEmailScreen";
 import SignUpVerifyIdentityScreen from "./SignUpVerifyIdentityScreen";
 import SignUpTwoScreen from "./SignUpTwoScreen";
 import SignUpAllSetScreen from "./SignUpAllSetScreen";
-
+import ServicesScreen from "./ServicesScreen";
+import BunktobanktransferScreen from "./BunktobanktransferScreen";
+import AccountinfoScreen from "./AccountinfoScreen";
 
 export {
   SignupScreen,
@@ -21,10 +23,13 @@ export {
   HistoryScreen,
   SettingsScreen,
   HomeScreen,
-  AnalyticsScreen, 
-  SignUpVerifyNumberScreen, 
-  SignUpVerifyEmailScreen, 
-  SignUpVerifyIdentityScreen, 
-  SignUpTwoScreen, 
-  SignUpAllSetScreen
+  AnalyticsScreen,
+  SignUpVerifyNumberScreen,
+  SignUpVerifyEmailScreen,
+  SignUpVerifyIdentityScreen,
+  SignUpTwoScreen,
+  SignUpAllSetScreen,
+  ServicesScreen,
+  BunktobanktransferScreen,
+  AccountinfoScreen,
 };

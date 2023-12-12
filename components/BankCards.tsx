@@ -4,10 +4,10 @@ import { BKText, BKView } from "../DCommon";
 import { colors } from "../themes";
 import { Accessbanklogoicon } from "../assets/icons";
 
-const BankCards = ({ item }: { item: any }) => {
+const BankCards = ({ item, full }: { item: any; full?: boolean }) => {
   const { type, acctBalance, acctNumber, bankName } = item;
   return (
-    <View style={styles.bankCardsWrap}>
+    <View style={[styles.bankCardsWrap, { width: full ? "100%" : 330 }]}>
       <View style={{ flex: 1, justifyContent: "space-between" }}>
         <BKView row centered Sbetween end>
           <View>
@@ -39,7 +39,6 @@ export default BankCards;
 const styles = StyleSheet.create({
   bankCardsWrap: {
     height: 154,
-    width: 330,
     backgroundColor: "rgba(39, 42, 60, 0.3)",
     borderRadius: 10,
     borderColor: "#272A3C",

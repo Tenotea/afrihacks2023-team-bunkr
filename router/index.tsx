@@ -14,11 +14,14 @@ import { Platform, StyleSheet, View, Text, Pressable } from "react-native";
 
 import {
   AccountScreen,
+  AccountinfoScreen,
   AnalyticsScreen,
   B2btransferScreen,
+  BunktobanktransferScreen,
   DashboardScreen,
   HistoryScreen,
   HomeScreen,
+  ServicesScreen,
   SettingsScreen,
   SignUpAllSetScreen,
   SignUpTwoScreen,
@@ -27,6 +30,7 @@ import {
   SignUpVerifyNumberScreen,
   SignupScreen,
 } from "../screens";
+
 import {
   Accounttabicon,
   Analyticstabicon,
@@ -132,9 +136,18 @@ const NoAuthNavigator = () => {
     >
       <AuthStack.Screen name="Signup" component={SignupScreen} />
       <AuthStack.Screen name="ScreenTwo" component={SignUpTwoScreen} />
-      <AuthStack.Screen name="VerifyNumberScreen" component={SignUpVerifyNumberScreen} />
-      <AuthStack.Screen name="VerifyEmailScreen" component={SignUpVerifyEmailScreen} />
-      <AuthStack.Screen name="VerifyIdentityScreen" component={SignUpVerifyIdentityScreen} />
+      <AuthStack.Screen
+        name="VerifyNumberScreen"
+        component={SignUpVerifyNumberScreen}
+      />
+      <AuthStack.Screen
+        name="VerifyEmailScreen"
+        component={SignUpVerifyEmailScreen}
+      />
+      <AuthStack.Screen
+        name="VerifyIdentityScreen"
+        component={SignUpVerifyIdentityScreen}
+      />
       <AuthStack.Screen name="AllSetScreen" component={SignUpAllSetScreen} />
     </AuthStack.Navigator>
   );
@@ -172,6 +185,16 @@ const AuthenticatedNavigator = () => {
     >
       <AuthStack.Screen name="Dashboard" component={DashboardTabNavigator} />
       <AuthStack.Screen name="Transfer" component={B2btransferScreen} />
+      <AuthStack.Screen name="Services" component={ServicesScreen} />
+      <AuthStack.Screen name="B2btransfer" component={B2btransferScreen} />
+      <AuthStack.Screen
+        name="Bunk2banktransfer"
+        component={BunktobanktransferScreen}
+      />
+            <AuthStack.Screen
+        name="Accountinfo"
+        component={AccountinfoScreen}
+      />
     </AuthStack.Navigator>
   );
 };

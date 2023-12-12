@@ -6,25 +6,34 @@ import {
   Listheaders,
   WarningBox,
 } from "../components";
+import { Controller, useForm } from "react-hook-form";
 import { BKButton, BKInput } from "../DCommon";
 
-
-
-const B2btransferScreen = () => {
-
-
-
+const BunktobanktransferScreen = () => {
+  const { control, handleSubmit } = useForm({ mode: "all" });
   return (
-    <AppWrapper pH={0} pageTitle="Bunkr to Bunkr Transfer">
+    <AppWrapper pH={0} pageTitle="Bunkr to Bank Transfer">
       <ScrollView style={{}} showsVerticalScrollIndicator={false}>
         <AmountValue amount="21,730.00" pT={26} pB={33} />
 
         <Listheaders headerTitle="TRANSFER FROM" />
         <View style={{ paddingHorizontal: 15 }}>
-          <WarningBox warningText="The selected account does not have sufficient balance to process this transfer. Add a supplementary account to process this transaction in one go!" />
+          {/* <WarningBox warningText="The selected account does not have sufficient balance to process this transfer. Add a supplementary account to process this transaction in one go!" /> */}
         </View>
         <Listheaders headerTitle="TRANSFER TO" />
         <View style={{ paddingHorizontal: 15 }}>
+          <BKInput
+            mT={25}
+            mB={10}
+            label="Date of birth"
+            control={control}
+            name="dob"
+            placeholderText="e.g - 0123456789"
+            rules={{
+              required: "Date of birth is required",
+            }}
+          />
+
           <BKButton
             btnText="Continue"
             btnBg="#1F2232"
@@ -36,6 +45,6 @@ const B2btransferScreen = () => {
   );
 };
 
-export default B2btransferScreen;
+export default BunktobanktransferScreen;
 
 const styles = StyleSheet.create({});
