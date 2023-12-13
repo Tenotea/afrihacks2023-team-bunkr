@@ -9,27 +9,22 @@ import {
 } from "../components";
 import { B2bicon } from "../assets/icons";
 
-
-
-
 const ServicesScreen = ({ navigation }) => {
-
-
   const services = [
     {
       title: "TRANSFERS",
       datas: [
         {
           title: "Bunkr to Bank Transfer",
-          action: "Bunk2banktransfer"
+          action: "Bunk2banktransfer",
         },
         {
           title: "Bunkr to Bunkr Transfer",
-          action: "B2btransfer" 
+          action: "B2btransfer",
         },
         {
           title: "Schedule Transfer",
-          action: "Scheduletransfer"
+          action: "Scheduletransfer",
         },
       ],
     },
@@ -38,7 +33,6 @@ const ServicesScreen = ({ navigation }) => {
       datas: [
         {
           title: "Buy Airtime",
-
         },
         {
           title: "Buy Data",
@@ -51,7 +45,7 @@ const ServicesScreen = ({ navigation }) => {
         },
       ],
     },
-  
+
     {
       title: "ACCOUNTs",
       datas: [
@@ -91,7 +85,6 @@ const ServicesScreen = ({ navigation }) => {
     },
   ];
 
-
   return (
     <AppWrapper pageTitle="Services" pH={0}>
       <ScrollView>
@@ -104,9 +97,10 @@ const ServicesScreen = ({ navigation }) => {
             <>
               <Listheaders headerTitle={service.title} />
               <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-                {service.datas.map((data) => {
+                {service.datas.map((data, index) => {
                   return (
                     <IconwithTitle
+                      key={index + data.title}
                       action={data.action}
                       Icon={B2bicon}
                       title={data.title}

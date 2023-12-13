@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { BKText } from "../DCommon";
 import { Accessbanklogoicon } from "../assets/icons";
+import { useNavigation } from "@react-navigation/native";
 
 const BankAccountTags = ({
   bankName,
@@ -10,8 +11,11 @@ const BankAccountTags = ({
   bankName: string;
   bankBalance: string;
 }) => {
+  const navigation = useNavigation()
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => navigation.navigate("Accountinfo")}
+      activeOpacity={0.8}
       style={{
         flexDirection: "row",
         paddingHorizontal: 16,
@@ -21,7 +25,7 @@ const BankAccountTags = ({
         alignItems: "center",
         columnGap: 20,
         borderRadius: 5,
-        marginHorizontal: 25
+        marginHorizontal: 25,
       }}
     >
       <Accessbanklogoicon />
@@ -33,7 +37,7 @@ const BankAccountTags = ({
           ₦193,445
         </BKText>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

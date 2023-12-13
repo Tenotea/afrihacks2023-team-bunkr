@@ -4,9 +4,29 @@ import {
   AppWrapper,
   BankCards,
   Eachtransaction,
+  IconwithTitle,
   Listheaders,
 } from "../components";
 import { RECENT_TRANSACTIONS } from "../datas";
+import { B2bicon } from "../assets/icons";
+
+const accountActions = [
+  {
+    title: "Beneficiaries",
+  },
+  {
+    title: "Generate statement",
+  },
+  {
+    title: "Payment Links",
+  },
+  {
+    title: "Invoices",
+  },
+  {
+    title: "Disconnect Account",
+  },
+];
 
 const AccountinfoScreen = () => {
   const item = {
@@ -24,7 +44,20 @@ const AccountinfoScreen = () => {
         </View>
 
         <Listheaders headerTitle="ACCOUNT" />
-        <View style={{ height: 50 }} />
+
+        <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+          {accountActions.map((data, index) => {
+            return (
+              <IconwithTitle
+                key={index+data.title}
+                action={data.action}
+                Icon={B2bicon}
+                title={data.title}
+              />
+            );
+          })}
+        </View>
+
         <Listheaders headerTitle="RECENT TRANSACTIONS" mB={24} />
       </>
     );

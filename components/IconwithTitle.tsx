@@ -16,7 +16,7 @@ const IconwithTitle = ({
   return (
     <TouchableOpacity
       activeOpacity={0.8}
-      onPress={() => navigation.navigate(action)}
+      onPress={action ? () => navigation.navigate(action) : () => console.log(title)}
       style={{
         borderWidth: 1,
         borderColor: "#0F111C",
