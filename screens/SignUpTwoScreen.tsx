@@ -57,6 +57,7 @@ const SignUpTwoScreen = () => {
             required: "Date of birth is required",
           }}
           mB={42}
+          secureTextEntry={true}
         />
 
         <BKButton

@@ -27,22 +27,23 @@ const SignUpVerifyNumberScreen = () => {
         />
 
         <OTPInputView
-          style={{ width: "100%", }}
+          style={{ width: "100%", height: 100 }}
           pinCount={6}
           autoFocusOnLoad
-          codeInputFieldStyle={{width: 44, height: 44, borderRadius: 5, borderWidth: 1, borderColor: "#15171D", backgroundColor: "#0F1014", color: colors.blue10, fontSize: 14, fontWeight: "700"}}
+          codeInputFieldStyle={{width: 44, borderRadius: 5, borderWidth: 1, borderColor: "#15171D", backgroundColor: "#0F1014", color: colors.blue10, fontSize: 14, fontWeight: "700"}}
           codeInputHighlightStyle={{}}
           onCodeFilled={(code) => setOtpCode(code)}
           keyboardAppearance="dark"
           placeholderCharacter= "0"
           selectionColor={colors.blue10}
           placeholderTextColor="#313442"
+          
         />
-
         <BKButton
           btnText="Verify my phone number"
           onpress={goToVerifyEmailScreen}
         />
+
       </View>
     </PageWrapper>
   );

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import {Picker} from '@react-native-picker/picker';
+// import {Picker} from '@react-native-picker/picker';
 
 const DropDown = () => {
   const [selectedValue, setSelectedValue] = useState('option1');
 
   return (
     <View>
-      <Picker
+      {/* <Picker
         itemStyle={{color: "white"}}
         selectedValue={selectedValue}
         style={styles.picker}
@@ -17,7 +17,7 @@ const DropDown = () => {
         <Picker.Item label="Option 1" value="option1" />
         <Picker.Item label="Option 2" value="option2" />
         <Picker.Item label="Option 3" value="option3" />
-      </Picker>
+      </Picker> */}
     </View>
   );
 };
