@@ -8,6 +8,7 @@ type BtnProps = {
   onpress: () => void;
   btnText: string;
   btnBg?: string;
+  full?: boolean;
 };
 
 const BKButton = ({
@@ -16,13 +17,19 @@ const BKButton = ({
   btnBg = "#0029FF",
   mT = 0,
   mB = 0,
+  full = true,
 }: BtnProps) => {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
       style={[
         styles.btnWrap,
-        { backgroundColor: btnBg, marginBottom: mB, marginTop: mT },
+        {
+          backgroundColor: btnBg,
+          marginBottom: mB,
+          marginTop: mT,
+          flex: full ? 0 : 1,
+        },
       ]}
       onPress={onpress}
     >

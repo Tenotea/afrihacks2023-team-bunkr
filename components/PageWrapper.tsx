@@ -6,11 +6,14 @@ import { BKLogo } from "../DCommon";
 
 const PageWrapper = ({
   children,
+  scroll=true
 }: {
   bottom?: boolean;
   top?: boolean;
   children: React.ReactElement;
+  scroll?: boolean
 }) => {
+  const Wrapper = scroll ? ScrollView : View;
   return (
     <SafeAreaView
       style={{
@@ -21,7 +24,7 @@ const PageWrapper = ({
     >
       <StatusBar animated={true} barStyle="light-content" />
       <BKLogo />
-      <ScrollView style={{ flex: 1, paddingTop: 45 }}>{children}</ScrollView>
+      <Wrapper style={{ flex: 1, paddingTop: 45 }}>{children}</Wrapper>
     </SafeAreaView>
   );
 };

@@ -18,6 +18,8 @@ import {
   AnalyticsScreen,
   B2btransferScreen,
   BunktobanktransferScreen,
+  ConnectbankScreen,
+  ConnectsuccessScreen,
   DashboardScreen,
   HistoryScreen,
   HomeScreen,
@@ -39,7 +41,7 @@ import {
   Hometabicon,
   Settingsicon,
 } from "../assets/icons";
-import { useInsets } from "../hooks";
+import { useAuth, useInsets } from "../hooks";
 
 const AuthStack = createStackNavigator();
 const DashboardTabs = createBottomTabNavigator();
@@ -150,6 +152,14 @@ const NoAuthNavigator = () => {
         component={SignUpVerifyIdentityScreen}
       />
       <AuthStack.Screen name="AllSetScreen" component={SignUpAllSetScreen} />
+      <AuthStack.Screen
+        name="Connectbank"
+        component={ConnectbankScreen}
+      />
+      <AuthStack.Screen
+        name="Connectsuccess"
+        component={ConnectsuccessScreen}
+      />
     </AuthStack.Navigator>
   );
 };
@@ -193,13 +203,16 @@ const AuthenticatedNavigator = () => {
         component={BunktobanktransferScreen}
       />
       <AuthStack.Screen name="Accountinfo" component={AccountinfoScreen} />
-      <AuthStack.Screen name="Scheduletransfer" component={ScheduleTransferScreen} />
+      <AuthStack.Screen
+        name="Scheduletransfer"
+        component={ScheduleTransferScreen}
+      />
     </AuthStack.Navigator>
   );
 };
 
 export const NavigatorSelector = () => {
-  const token = true;
+  const {token} =  useAuth()
 
   return !token ? <NoAuthNavigator /> : <AuthenticatedNavigator />;
 };

@@ -15,6 +15,8 @@ import ServicesScreen from "./ServicesScreen";
 import BunktobanktransferScreen from "./BunktobanktransferScreen";
 import AccountinfoScreen from "./AccountinfoScreen";
 import ScheduleTransferScreen from "./ScheduleTransferScreen";
+import ConnectbankScreen from "./ConnectbankScreen";
+import ConnectsuccessScreen from "./ConnectsuccessScreen";
 
 export {
   SignupScreen,
@@ -34,4 +36,6 @@ export {
   BunktobanktransferScreen,
   AccountinfoScreen,
   ScheduleTransferScreen,
+  ConnectbankScreen,
+  ConnectsuccessScreen,
 };

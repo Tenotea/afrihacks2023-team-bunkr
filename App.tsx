@@ -6,11 +6,15 @@ import { useFonts } from "expo-font";
 import { useCallback } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { NavigatorSelector } from "./router";
+import { AuthProvider } from "./contexts/AuthContexts";
+
+
+
 
 SplashScreen.preventAutoHideAsync();
 export default function App() {
   const [fontsLoaded] = useFonts({
-    "SatoshiRegular": require("./assets/fonts/Svariable-regular.ttf"),
+    SatoshiRegular: require("./assets/fonts/Svariable-regular.ttf"),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -26,7 +30,9 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
       <NavigationContainer>
-        <NavigatorSelector />
+        <AuthProvider>
+          <NavigatorSelector />
+        </AuthProvider>
       </NavigationContainer>
     </GestureHandlerRootView>
   );

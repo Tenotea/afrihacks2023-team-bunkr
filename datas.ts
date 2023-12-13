@@ -151,3 +151,22 @@ export const INACTIVE_SCHEDULE = [
     active: false
   }
 ]
+
+export const BVN_LINK_ACCOUNT = [
+  {
+    bankName: "Access Bank PLC",
+    acctNumber: "1928840934"
+  },
+  {
+    bankName: "United Bank For Africa",
+    acctNumber: "2248488384"
+  },
+  {
+    bankName: "OPay",
+    acctNumber: "8044857749"
+  },
+  {
+    bankName: "Cowrywise",
+    acctNumber: "3488544394"
+  }
+]
