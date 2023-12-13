@@ -65,9 +65,10 @@ const BKText = ({
       style={[
         {
           color: color,
-          ...textWeightStyle,
           fontSize: size,
           fontStyle: italized ? "italic" : "normal",
+          ...textWeightStyle,
+
         },
         ui,
       ]}

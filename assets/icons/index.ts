@@ -12,7 +12,9 @@ import Dropdownbankicon from "./Dropdownbankicon";
 import Dropdownicon from "./Dropdownicon";
 import Historyicon from "./Historyicon";
 import Hometabicon from "./Hometabicon";
+import Inputsearchicon from "./Inputsearchicon";
 import Paybillsicon from "./Paybillsicon";
+import Scheduletransfericon from "./Scheduletransfericon";
 import Settingsicon from "./Settingsicon";
 import Transfericon from "./Transfericon";
 
@@ -34,4 +36,6 @@ export {
   Backarrowicon,
   B2bicon,
   Accountwarningicon,
+  Inputsearchicon,
+  Scheduletransfericon,
 };

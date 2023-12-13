@@ -21,6 +21,7 @@ import {
   DashboardScreen,
   HistoryScreen,
   HomeScreen,
+  ScheduleTransferScreen,
   ServicesScreen,
   SettingsScreen,
   SignUpAllSetScreen,
@@ -191,10 +192,8 @@ const AuthenticatedNavigator = () => {
         name="Bunk2banktransfer"
         component={BunktobanktransferScreen}
       />
-            <AuthStack.Screen
-        name="Accountinfo"
-        component={AccountinfoScreen}
-      />
+      <AuthStack.Screen name="Accountinfo" component={AccountinfoScreen} />
+      <AuthStack.Screen name="Scheduletransfer" component={ScheduleTransferScreen} />
     </AuthStack.Navigator>
   );
 };

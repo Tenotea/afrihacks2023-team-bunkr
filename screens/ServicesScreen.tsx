@@ -1,24 +1,123 @@
-import { StyleSheet, Text, View } from "react-native";
+import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import {
   AmountValue,
   AppWrapper,
   IconwithTitle,
   Listheaders,
+  SearchInput,
 } from "../components";
 import { B2bicon } from "../assets/icons";
 
+
+
+
 const ServicesScreen = ({ navigation }) => {
+
+
+  const services = [
+    {
+      title: "TRANSFERS",
+      datas: [
+        {
+          title: "Bunkr to Bank Transfer",
+          action: "Bunk2banktransfer"
+        },
+        {
+          title: "Bunkr to Bunkr Transfer",
+          action: "B2btransfer" 
+        },
+        {
+          title: "Schedule Transfer",
+          action: "Scheduletransfer"
+        },
+      ],
+    },
+    {
+      title: "PAY BILLS",
+      datas: [
+        {
+          title: "Buy Airtime",
+
+        },
+        {
+          title: "Buy Data",
+        },
+        {
+          title: "Electricity",
+        },
+        {
+          title: "Cable Tv",
+        },
+      ],
+    },
+  
+    {
+      title: "ACCOUNTs",
+      datas: [
+        {
+          title: "Beneficiaries",
+        },
+        {
+          title: "Generate statement",
+        },
+        {
+          title: "Payment Links",
+        },
+        {
+          title: "Invoices",
+        },
+      ],
+    },
+    {
+      title: "OTHERS",
+      datas: [
+        {
+          title: "Gift Cards",
+        },
+        {
+          title: "Hotels",
+        },
+        {
+          title: "Travel",
+        },
+        {
+          title: "Games",
+        },
+        {
+          title: "Education",
+        },
+      ],
+    },
+  ];
+
+
   return (
     <AppWrapper pageTitle="Services" pH={0}>
-      <>
-        <Listheaders headerTitle="TRANSFERS" />
-        <IconwithTitle
-          action="Bunk2banktransfer"
-          Icon={B2bicon}
-          title="Bunkr to Bank Transfer"
-        />
-      </>
+      <ScrollView>
+        <View style={{ paddingHorizontal: 25, paddingBottom: 32 }}>
+          <SearchInput />
+        </View>
+
+        {services.map((service) => {
+          return (
+            <>
+              <Listheaders headerTitle={service.title} />
+              <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+                {service.datas.map((data) => {
+                  return (
+                    <IconwithTitle
+                      action={data.action}
+                      Icon={B2bicon}
+                      title={data.title}
+                    />
+                  );
+                })}
+              </View>
+            </>
+          );
+        })}
+      </ScrollView>
     </AppWrapper>
   );
 };
