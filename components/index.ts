@@ -13,6 +13,7 @@ import PageheaderSubheader from "./PageheaderSubheader";
 import ScrollableWrapper from "./ScrollableWrapper";
 import TabWrapper from "./TabWrapper";
 import WarningBox from "./WarningBox";
+import DropDown from "./DropDown";
 
 export {
   PageWrapper,
@@ -30,4 +31,5 @@ export {
   Listheaders,
   IconwithTitle,
   BankAccountTags,
+  DropDown
 };
