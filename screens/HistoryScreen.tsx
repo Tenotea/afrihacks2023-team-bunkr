@@ -82,7 +82,7 @@ const HistoryScreen = () => {
 
 
   return (
-    <TabWrapper pH={14}>
+    <TabWrapper pH={25}>
       <>
         <BKView row Sbetween centered ui={{ paddingVertical: 12 }}>
           <BKText size={18} weight="extrabold">

@@ -32,7 +32,7 @@ const HomeScreen = () => {
       <>
         <Networth />
         <LinkedCards />
-        <View style={{ paddingHorizontal: 14 }}>
+        <View style={{ paddingHorizontal: 25 }}>
           <DashboardActions />
           <BKText
             size={10}
@@ -60,7 +60,7 @@ const HomeScreen = () => {
           contentContainerStyle={{ paddingBottom: 80 }}
           ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
           renderItem={({ item }) => {
-            return <Eachtransaction datas={item} mH={14} />;
+            return <Eachtransaction datas={item} mH={25} />;
           }}
         />
       </>

@@ -1,9 +1,13 @@
-import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Dimensions, FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Greetingsheader, Networth, TabWrapper } from "../components";
-import { BKText, BKView } from "../DCommon";
+import { DropDown, Greetingsheader, Listheaders, Networth, TabWrapper } from "../components";
+import { BKButton, BKText, BKView } from "../DCommon";
 import { STATS_ACCT } from "../datas";
 import { colors } from "../themes";
+import {
+  LineChart,
+} from "react-native-chart-kit";
+const screenWidth = Dimensions.get("window").width;
 
 type StatProps = {
   item: {
@@ -45,11 +49,60 @@ const EachAccountStat = ({ item }: StatProps) => {
   );
 };
 
+const data = {
+  labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+  datasets: [
+    {
+      // data: [1, 5, 10, 20, 30],
+      data: [5, 20, 15, 4, 8, 1, 20],
+      color: (opacity = 1) => `#5BFF6C`, // Bezier line color
+      strokeWidth: 2, // Bezier line thickness
+    },
+  ],
+};
+
+
+const Chart = () => {
+  return (
+    <View style={{  }}>
+    <LineChart
+      data={data}
+      width={screenWidth - 50} // Adjust according to your layout
+      height={220} // Adjust according to your layout
+      yAxisSuffix="k" // Y-axis label suffix
+      yAxisInterval={1} // Y-axis interval
+      chartConfig={{
+        backgroundGradientFrom: '#0C0D16',
+        backgroundGradientTo: '#0C0D16',
+        decimalPlaces: 0, // No decimal places for Y-axis labels
+        color: (opacity = 1) => `transparent`, // Y-axis label color
+        labelColor: (opacity = 1) => `#7E84A5`, // X-axis label color
+        style: {
+          borderRadius: 16,
+        },
+        propsForDots: {
+          r: '4',
+          strokeWidth: '2',
+          // stroke: '#ffa726',
+        },
+      }}
+      bezier
+      style={{
+        marginVertical: 8,
+        borderRadius: 16,
+      }}
+    />
+  </View>
+  )
+}
+
 const AnalyticsScreen = () => {
   return (
-    <TabWrapper>
+    <TabWrapper pH={0}>
       <>
+      <View style={{paddingHorizontal: 25}}>
         <Greetingsheader extraInfo="You are view your portfolio analytics" />
+      </View>
 
         <ScrollView>
           <>
@@ -59,11 +112,25 @@ const AnalyticsScreen = () => {
               scrollEnabled={false}
               numColumns={2}
               style={{ gap: 10 }}
-              contentContainerStyle={{ rowGap: 10, columnGap: 10 }}
+              contentContainerStyle={{ rowGap: 10, columnGap: 10, paddingHorizontal: 25 }}
               columnWrapperStyle={{ gap: 10 }}
               renderItem={EachAccountStat}
             />
           </>
+          <View style={{ marginBottom: 48 }}>
+            <Listheaders headerTitle="ACCOUNT BALANCE ANALYSIS" mT={31} mB={47} />
+
+            <Chart />
+            <BKButton btnText="View full report" btnBg="#0C0D16" onpress={() => console.log("working 🚀")} mT={20} />
+          </View>
+
+          {/* <Text style={{ color: "white", marginBottom: 100 }}>Yoooo</Text> */}
+
+          <View style={{ marginBottom: 100 }}>
+            <Listheaders headerTitle="CREDIT VS DEBIT" mB={48}/>
+            <Chart />
+            <BKButton btnText="View full report" btnBg="#0C0D16" onpress={() => console.log("working 🚀")} mT={20} />
+          </View>
         </ScrollView>
       </>
     </TabWrapper>

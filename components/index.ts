@@ -17,6 +17,7 @@ import ScrollableWrapper from "./ScrollableWrapper";
 import SearchInput from "./SearchInput";
 import TabWrapper from "./TabWrapper";
 import WarningBox from "./WarningBox";
+import DropDown from "./DropDown";
 
 export {
   PageWrapper,
@@ -38,4 +39,5 @@ export {
   OnScreenAlert,
   EmptyState,
   ScheduleTransfer,
+  DropDown
 };
