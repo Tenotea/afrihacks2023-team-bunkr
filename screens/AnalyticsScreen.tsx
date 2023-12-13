@@ -1,6 +1,6 @@
 import { Dimensions, FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { DropDown, Greetingsheader, Listheaders, Networth, TabWrapper } from "../components";
+import { Greetingsheader, Listheaders, Networth, TabWrapper } from "../components";
 import { BKButton, BKText, BKView } from "../DCommon";
 import { STATS_ACCT } from "../datas";
 import { colors } from "../themes";

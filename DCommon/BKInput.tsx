@@ -28,6 +28,8 @@ type inputProps = {
   editable?: boolean;
   inputGroup?:boolean
   textInputProps?: TextInputProps;
+  numericKeyboard?: boolean;
+  secureTextEntry?: boolean;
 };
 
 const BKInput = ({
@@ -45,6 +47,8 @@ const BKInput = ({
   editable = true,
   inputGroup = false,
   textInputProps,
+  numericKeyboard = false,
+  secureTextEntry = false,
 }: inputProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -82,6 +86,8 @@ const BKInput = ({
                 value={value}
                 placeholder={placeholderText}
                 placeholderTextColor="#313442"
+                keyboardType={numericKeyboard ? "numeric" : "default"}
+                secureTextEntry={secureTextEntry}
               />
               {error && (
                 <BKText italized size={12} color={colors.red10}>
@@ -191,6 +197,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: "#0F1014",
     marginTop: 5,
+    color: "white"
   },
 
   inputGroup: {

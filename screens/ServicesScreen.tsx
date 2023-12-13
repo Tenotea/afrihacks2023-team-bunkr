@@ -100,7 +100,7 @@ const ServicesScreen = ({ navigation }) => {
                 {service.datas.map((data, index) => {
                   return (
                     <IconwithTitle
-                      key={index + data.title}
+                      key={index.toString() + data.title}
                       action={data.action}
                       Icon={B2bicon}
                       title={data.title}

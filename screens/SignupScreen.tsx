@@ -34,6 +34,7 @@ const SignupScreen = () => {
           rules={{
             required: "Phone number is required",
           }}
+          numericKeyboard
         />
 
 
@@ -42,7 +43,7 @@ const SignupScreen = () => {
           label="Date of birth"
           control={control}
           name="dob"
-          placeholderText="e.g - 0123456789"
+          placeholderText="DD/MM/YYYY "
           rules={{
             required: "Date of birth is required",
           }}

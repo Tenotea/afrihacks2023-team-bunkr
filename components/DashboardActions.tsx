@@ -13,17 +13,17 @@ import { useNavigation } from "@react-navigation/native";
 const DashboardActions = () => {
   const navigation = useNavigation();
   const actions = [
-    // {
-    //   Icon: Banktransfericon,
-    //   title: "Bank Transfer",
-    // },
+    {
+      Icon: Banktransfericon,
+      title: "Bank Transfer",
+    },
     {
       Icon: Paybillsicon,
       title: "Pay Bills",
     },
     {
       Icon: Transfericon,
-      title: `Transfer`,
+      title: `Schedule\nTransfer`,
     },
     {
       Icon: Dashboardmoreicon,
