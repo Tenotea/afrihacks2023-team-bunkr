@@ -20,18 +20,16 @@ const IconwithTitle = ({
       style={{
         borderWidth: 1,
         borderColor: "#0F111C",
-        paddingHorizontal: 25,
         paddingVertical: 14,
         alignItems: "center",
         rowGap: 5,
+        flex: 1,
+        maxWidth: 100,
+        minWidth: 80,
       }}
     >
       <Icon />
-      <BKText
-        size={12}
-        color="#7E84A5"
-        ui={{ maxWidth: 80, textAlign: "center" }}
-      >
+      <BKText size={12} color="#7E84A5" ui={{ width: 80, textAlign: "center" }}>
         {title}
       </BKText>
     </TouchableOpacity>

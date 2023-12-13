@@ -14,7 +14,7 @@ import { Dropdownbankicon, Dropdownicon } from "../assets/icons";
 import BKView from "./BKView";
 
 type inputProps = {
-  label: string;
+  label?: string;
   placeholderText?: string;
   mT?: number;
   mB?: number;
@@ -149,10 +149,9 @@ const BKInput = ({
           },
         ]}
       >
-        <BKText size={12}>{label}</BKText>
         <Pressable
           onPress={onPress}
-          style={[styles.textInputStyle, { justifyContent: "center" }]}
+          style={[styles.textInputStyle, { justifyContent: "center", paddingHorizontal: 25, }]}
         >
           <View style={{ flexDirection: "row", alignItems: "center", flex: 1 }}>
             <View

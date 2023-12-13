@@ -116,3 +116,38 @@ export const STATS_ACCT = [
     percentSpent: 47,
   },
 ];
+
+
+export const ACTIVE_SCHEDULE = [
+  {
+    scheduleTitle: "Monthly Tithe",
+    nextCallDate: "Next execution: 12 Dec, 2023",
+    numberOfExecuted: "2",
+    numberLeft: "3",
+    active: true
+  },
+  {
+    scheduleTitle: "Emmanuel’s Allowance",
+    nextCallDate: "Next execution: 27 Dec, 2023",
+    numberOfExecuted: "4",
+    numberLeft: "7",
+    active: true
+  }
+]
+
+export const INACTIVE_SCHEDULE = [
+  {
+    scheduleTitle: "Sporty Bet Funds",
+    nextCallDate: "Next execution: 9 Dec, 2023",
+    numberOfExecuted: "1",
+    numberLeft: "5",
+    active: false
+  },
+  {
+    scheduleTitle: "Data Allowance",
+    nextCallDate: "Next execution: 25 Dec, 2023",
+    numberOfExecuted: "13",
+    numberLeft: "17",
+    active: false
+  }
+]

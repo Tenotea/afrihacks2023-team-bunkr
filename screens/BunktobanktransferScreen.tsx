@@ -13,25 +13,55 @@ const BunktobanktransferScreen = () => {
   const { control, handleSubmit } = useForm({ mode: "all" });
   return (
     <AppWrapper pH={0} pageTitle="Bunkr to Bank Transfer">
-      <ScrollView style={{}} showsVerticalScrollIndicator={false}>
+
+
+      <ScrollView showsVerticalScrollIndicator={false}>
+
         <AmountValue amount="21,730.00" pT={26} pB={33} />
 
         <Listheaders headerTitle="TRANSFER FROM" />
-        <View style={{ paddingHorizontal: 15 }}>
-          {/* <WarningBox warningText="The selected account does not have sufficient balance to process this transfer. Add a supplementary account to process this transaction in one go!" /> */}
+        <View style={{ padding: 25 }}>
+          {false && <WarningBox warningText="The selected account does not have sufficient balance to process this transfer. Add a supplementary account to process this transaction in one go!" />}
+
+          <BKInput 
+          mB={10}
+          control={control}
+          name="dob"
+          placeholderText="e.g - 0123456789"
+          rules={{
+            required: "Account Number is required",
+          }}
+          type="dropdown"
+          onPress={() => console.log("yes")}
+          
+          />
         </View>
+
+
         <Listheaders headerTitle="TRANSFER TO" />
-        <View style={{ paddingHorizontal: 15 }}>
+        <View style={{ padding: 25 }}>
           <BKInput
-            mT={25}
             mB={10}
-            label="Date of birth"
+            label="Account Number"
             control={control}
             name="dob"
             placeholderText="e.g - 0123456789"
             rules={{
-              required: "Date of birth is required",
+              required: "Account Number is required",
             }}
+          />
+
+          <BKInput 
+          mB={10}
+          control={control}
+          name="dob"
+          placeholderText="e.g - 0123456789"
+          rules={{
+            required: "Account Number is required",
+          }}
+          type="dropdown"
+          onPress={() => console.log("yes")}
+          
           />
 
           <BKButton

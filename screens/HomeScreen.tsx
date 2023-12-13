@@ -13,10 +13,6 @@ import { colors } from "../themes";
 import { BANK_CARDS, RECENT_TRANSACTIONS } from "../datas";
 
 const HomeScreen = () => {
-
-
-
-
   const LinkedCards = () => {
     return (
       <FlatList
@@ -26,7 +22,7 @@ const HomeScreen = () => {
         contentContainerStyle={{ gap: 12, paddingHorizontal: 14 }}
         snapToAlignment="center"
         pagingEnabled
-        renderItem={({item}) => <BankCards item={item} />}
+        renderItem={({ item }) => <BankCards item={item} />}
       />
     );
   };
@@ -63,11 +59,9 @@ const HomeScreen = () => {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ paddingBottom: 80 }}
           ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
-          renderItem={({item}) => {
-            return (
-              <Eachtransaction datas={item} mH={14} />
-            )
-          } }
+          renderItem={({ item }) => {
+            return <Eachtransaction datas={item} mH={14} />;
+          }}
         />
       </>
     </TabWrapper>
